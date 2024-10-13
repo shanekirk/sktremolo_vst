@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="wyOekn" name="SKTremolo" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="Shane Kirk"
+              companyWebsite="www.shanekirk.com" companyCopyright="Copyright(C) 2024, Shane Kirk"
+              companyEmail="shane@shanekirk.com" bundleIdentifier="com.shanekirk.tremolo">
+  <MAINGROUP id="oBdV0a" name="SKTremolo">
+    <GROUP id="{4F85080A-04BE-6219-95B0-F08F3FCA6D8A}" name="Assets">
+      <FILE id="CUaIT6" name="about.svg" compile="0" resource="1" file="Resources/about.svg"/>
+      <FILE id="OSFq56" name="sine_wave.svg" compile="0" resource="1" file="Resources/sine_wave.svg"/>
+      <FILE id="kILG2l" name="square_wave.svg" compile="0" resource="1" file="Resources/square_wave.svg"/>
+      <FILE id="tatrCi" name="title.svg" compile="0" resource="1" file="Resources/title.svg"/>
+      <FILE id="ZyTIVN" name="triangle_wave.svg" compile="0" resource="1"
+            file="Resources/triangle_wave.svg"/>
+    </GROUP>
+    <GROUP id="{EC0CDFA7-F373-5A6E-75FC-5C2EF78DBC90}" name="Source">
+      <GROUP id="{13A0ED88-A77F-D6B5-F045-04B5EBCD2333}" name="common">
+        <FILE id="akUVwe" name="AudioParams.cpp" compile="1" resource="0" file="Source/common/AudioParams.cpp"/>
+        <FILE id="CYxzmP" name="AudioParams.h" compile="0" resource="0" file="Source/common/AudioParams.h"/>
+      </GROUP>
+      <GROUP id="{DEA73609-F182-C40F-A33D-CDF162971DEC}" name="dsp">
+        <FILE id="tcL111" name="Oscillator.h" compile="0" resource="0" file="Source/dsp/Oscillator.h"/>
+        <FILE id="UXVkI7" name="SineWaveOscillator.h" compile="0" resource="0"
+              file="Source/dsp/SineWaveOscillator.h"/>
+        <FILE id="eVt8s0" name="SquareWaveOscillator.h" compile="0" resource="0"
+              file="Source/dsp/SquareWaveOscillator.h"/>
+        <FILE id="mopqrZ" name="TremoloAudioProcessor.cpp" compile="1" resource="0"
+              file="Source/dsp/TremoloAudioProcessor.cpp"/>
+        <FILE id="SytpVY" name="TremoloAudioProcessor.h" compile="0" resource="0"
+              file="Source/dsp/TremoloAudioProcessor.h"/>
+        <FILE id="WBBp8b" name="TriangleWaveOscillator.h" compile="0" resource="0"
+              file="Source/dsp/TriangleWaveOscillator.h"/>
+      </GROUP>
+      <GROUP id="{22323295-87BE-FA59-722E-FA01A864E02B}" name="ui">
+        <FILE id="JmmPDB" name="Knob.cpp" compile="1" resource="0" file="Source/ui/Knob.cpp"/>
+        <FILE id="PZGOGL" name="Knob.h" compile="0" resource="0" file="Source/ui/Knob.h"/>
+        <FILE id="OrlQe8" name="TremoloAudioProcessorEditor.cpp" compile="1"
+              resource="0" file="Source/ui/TremoloAudioProcessorEditor.cpp"/>
+        <FILE id="ekd7gV" name="TremoloAudioProcessorEditor.h" compile="0"
+              resource="0" file="Source/ui/TremoloAudioProcessorEditor.h"/>
+        <FILE id="MsJqgV" name="Version.h" compile="0" resource="0" file="Source/ui/Version.h"/>
+        <FILE id="hWYc62" name="IconButton.h" compile="0" resource="0" file="Source/ui/IconButton.h"/>
+      </GROUP>
+      <FILE id="n1HFhg" name="Plugin.cpp" compile="1" resource="0" file="Source/Plugin.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="SKTremolo" headerPath="..\..\Source"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="SKTremolo" headerPath="..\..\Source"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2022>
+  </EXPORTFORMATS>
+</JUCERPROJECT>
