@@ -112,14 +112,11 @@ void TremoloAudioProcessor::parameterValueChanged(int parameterIndex, float newV
     {
         case 0:
         {
-            float speed = m_audioParams.m_pSpeedParamInHz->convertFrom0to1(newValue);
             // We update ALL of our wave generators so the user can toggle between them
             // all cleanly at runtime.
             for (auto &spOscillator : m_oscillators)
             {
-                spOscillator->setFrequency(speed);
                 spOscillator->setFrequency(*m_audioParams.m_pSpeedParamInHz);
-                spOscillator->reset();
             }
             break;
         }
